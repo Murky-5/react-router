@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 
-import Header from "./Components/Header";
-
 import Default from "./Layout/Default";
 
 import Home from "./Pages/Home";
@@ -19,16 +17,13 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<Default />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/List" element={<List />} />
-            <Route path="/Who" element={<Who />} />
-            <Route path="/List:id" element={<List req={element} />} />
+            <Route index element={<Home />} />
+            {/* <Route path="/List" element={<List />} /> */}
+            {/* <Route path="/Who" element={<Who />} />
+            <Route path="/List:id" element={<List req={element} />} /> */}
           </Route>
         </Routes>
       </BrowserRouter>
-      <RouterDOM>
-        <Header />
-      </RouterDOM>
     </>
   );
 }

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-export default function nomeFunzione() {
+export default () => {
   return (
     <header>
       <hhead className="container">
@@ -12,4 +12,4 @@ export default function nomeFunzione() {
       </hhead>
     </header>
   );
-}
+};

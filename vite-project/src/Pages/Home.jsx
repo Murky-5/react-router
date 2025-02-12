@@ -1,18 +1,13 @@
-import { UseEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-const [ps, setps] = useState(Boolean);
-
-const castoro = () => {
-  setps((beep) => beep === true);
-};
+import Header from "../Components/Header";
 
 export default () => {
   return (
     <>
-      <input type="text" value={ps}></input>
-      <button type="button" onClick={castoro}>
-        clliccami
-      </button>
+      <Header />
+      <input type="text"></input>
+      <button type="button">clliccami</button>
     </>
   );
 };
