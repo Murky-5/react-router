@@ -1,0 +1,15 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "back",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.js",
+    "watch": "--watch index"
+  },
+  "author": "mirkodidio",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

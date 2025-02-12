@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
-import Header from "../Components/Header";
-
 export default () => {
+  const [ps, setps] = useState("ciao");
   return (
     <>
-      <Header />
       <input type="text"></input>
-      <button type="button">clliccami</button>
+      <button type="button" value={ps} onClick={(e) => setps(e.target.value)}>
+        clliccami
+      </button>
     </>
   );
 };
