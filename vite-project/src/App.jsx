@@ -8,6 +8,8 @@ import Home from "./Pages/Home";
 import List from "./Pages/List";
 import Who from "./Pages/Who";
 
+import { DigDataContext } from "./Components/CountContext";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -15,16 +17,18 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<Default />}>
-            <Route index element={<Home />} />
-            <Route path="/List" element={<List />} />
-            <Route path="/Who" element={<Who />} />
-            {/* <Route path="/List/:id" element={<List req={element} />} /> */}
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <DigDataContext>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<Default />}>
+              <Route index element={<Home />} />
+              <Route path="/List" element={<List />} />
+              <Route path="/Who" element={<Who />} />
+              {/* <Route path="/List/:id" element={<List req={element} />} /> */}
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </DigDataContext>
     </>
   );
 }
